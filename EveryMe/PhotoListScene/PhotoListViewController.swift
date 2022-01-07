@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  PhotoListViewController.swift
 //  EveryMe
 //
 //  Created by Seunghun Yang on 2022/01/07.
@@ -7,10 +7,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class PhotoListViewController: UIViewController {
     
-    convenience init() {
+    private var viewModel: PhotoListViewModel!
+    
+    convenience init(viewModel: PhotoListViewModel) {
         self.init(nibName: nil, bundle: nil)
+        self.viewModel = viewModel
     }
     
     override func viewDidLoad() {
