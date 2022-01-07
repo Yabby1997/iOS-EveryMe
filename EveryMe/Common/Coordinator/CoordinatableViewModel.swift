@@ -7,11 +7,12 @@
 
 import Combine
 import Foundation
+import UIKit
 
 class CoordinatableViewModel {
-    var disappearSignalPublisher: PassthroughSubject<Void, Never> = PassthroughSubject()
+    private (set) var deinitSignalPublisher: PassthroughSubject<Void, Never> = PassthroughSubject()
     
-    func viewDidDisappear() {
-        self.disappearSignalPublisher.send(())
+    func sceneDidDeinit() {
+        self.deinitSignalPublisher.send(())
     }
 }
