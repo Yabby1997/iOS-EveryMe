@@ -27,6 +27,27 @@ class PhotoListViewController: UIViewController {
         return collectionView
     }()
     
+    private lazy var shareButton: FloatingButton = {
+        let floatingButton = FloatingButton()
+        floatingButton.icon = UIImage(systemName: "square.and.arrow.up")
+        floatingButton.iconColor = .black
+        return floatingButton
+    }()
+    
+    private lazy var photoButton: FloatingButton = {
+        let floatingButton = FloatingButton()
+        floatingButton.icon = UIImage(systemName: "camera")
+        floatingButton.iconColor = .black
+        return floatingButton
+    }()
+    
+    private lazy var buttonStack: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [self.shareButton, self.photoButton])
+        stackView.axis = .vertical
+        stackView.spacing = 16
+        return stackView
+    }()
+    
     // MARK: - Sublayers
     
     private lazy var shadowLayer: CAGradientLayer = {
@@ -87,6 +108,13 @@ class PhotoListViewController: UIViewController {
         
         self.view.addSubview(self.photoListCollectionView)
         self.view.layer.addSublayer(self.shadowLayer)
+        
+        self.view.addSubview(self.buttonStack)
+        self.buttonStack.snp.makeConstraints { make in
+            make.trailing.equalToSuperview().offset(-16)
+            make.bottom.equalToSuperview().offset(-16)
+            make.width.equalTo(65)
+        }
     }
     
     private func configureDataSource() {
