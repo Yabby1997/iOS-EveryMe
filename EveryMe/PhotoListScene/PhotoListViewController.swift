@@ -34,7 +34,7 @@ class PhotoListViewController: UIViewController {
         return floatingButton
     }()
     
-    private lazy var photoButton: FloatingButton = {
+    private lazy var cameraButton: FloatingButton = {
         let floatingButton = FloatingButton()
         floatingButton.icon = UIImage(systemName: "camera")
         floatingButton.iconColor = .black
@@ -42,7 +42,7 @@ class PhotoListViewController: UIViewController {
     }()
     
     private lazy var buttonStack: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [self.shareButton, self.photoButton])
+        let stackView = UIStackView(arrangedSubviews: [self.shareButton, self.cameraButton])
         stackView.axis = .vertical
         stackView.spacing = 16
         return stackView
@@ -97,6 +97,7 @@ class PhotoListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureUI()
+        self.bindUI()
         self.configureDataSource()
         self.applySnapshot(photos: self.items)
     }
@@ -115,6 +116,20 @@ class PhotoListViewController: UIViewController {
             make.bottom.equalToSuperview().offset(-16)
             make.width.equalTo(65)
         }
+    }
+    
+    private func bindUI() {
+        self.cameraButton.publisher(for: .touchUpInside)
+            .sink { [weak self] _ in
+                self?.viewModel.cameraButtonDidTap()
+            }
+            .store(in: &self.cancellables)
+        
+        self.shareButton.publisher(for: .touchUpInside)
+            .sink { [weak self] _ in
+                self?.viewModel.shareButtonDidTap()
+            }
+            .store(in: &self.cancellables)
     }
     
     private func configureDataSource() {

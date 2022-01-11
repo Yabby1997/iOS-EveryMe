@@ -8,6 +8,27 @@
 import Combine
 import Foundation
 
-class PhotoListViewModel: CoordinatableViewModel {
+protocol PhotoListViewModelInput {
+    func shareButtonDidTap()
+    func cameraButtonDidTap()
+}
+
+protocol PhotoListViewModelOutput {
+    var cameraButtonDidTapSignalPublisher: PassthroughSubject<Void, Never> { get }
+    var shareButtonDidTapSignalPublisher: PassthroughSubject<Void, Never> { get }
+}
+
+typealias PhotoListViewModelProtocol = PhotoListViewModelInput & PhotoListViewModelOutput
+
+class PhotoListViewModel: CoordinatableViewModel, PhotoListViewModelProtocol {
+    var cameraButtonDidTapSignalPublisher: PassthroughSubject<Void, Never> = PassthroughSubject()
+    var shareButtonDidTapSignalPublisher: PassthroughSubject<Void, Never> = PassthroughSubject()
     
+    func cameraButtonDidTap() {
+        self.cameraButtonDidTapSignalPublisher.send(())
+    }
+    
+    func shareButtonDidTap() {
+        self.shareButtonDidTapSignalPublisher.send(())
+    }
 }
