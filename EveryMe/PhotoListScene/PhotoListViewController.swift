@@ -29,14 +29,14 @@ class PhotoListViewController: UIViewController {
     
     private lazy var shareButton: FloatingButton = {
         let floatingButton = FloatingButton()
-        floatingButton.icon = UIImage(systemName: "square.and.arrow.up")
+        floatingButton.icon = .squareAndArrowUp
         floatingButton.iconColor = .black
         return floatingButton
     }()
     
     private lazy var cameraButton: FloatingButton = {
         let floatingButton = FloatingButton()
-        floatingButton.icon = UIImage(systemName: "camera")
+        floatingButton.icon = .camera
         floatingButton.iconColor = .black
         return floatingButton
     }()

@@ -22,6 +22,7 @@
 		1DE2D1542789E78600715D77 /* PhotoListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE2D1532789E78600715D77 /* PhotoListCell.swift */; };
 		1DEC9710278DB6D4006EC302 /* Appearances.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEC970F278DB6D4006EC302 /* Appearances.swift */; };
 		1DEC9712278DB9C4006EC302 /* FloatingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEC9711278DB9C4006EC302 /* FloatingButton.swift */; };
+		1DEC9715278DC1D2006EC302 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEC9714278DC1D2006EC302 /* UIImage+Extensions.swift */; };
 		6F4F17996CC8485F21D65B48 /* Pods_EveryMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6463AAAD9514885B542AE1A2 /* Pods_EveryMe.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		1DE2D1532789E78600715D77 /* PhotoListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListCell.swift; sourceTree = "<group>"; };
 		1DEC970F278DB6D4006EC302 /* Appearances.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appearances.swift; sourceTree = "<group>"; };
 		1DEC9711278DB9C4006EC302 /* FloatingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButton.swift; sourceTree = "<group>"; };
+		1DEC9714278DC1D2006EC302 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
 		6463AAAD9514885B542AE1A2 /* Pods_EveryMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EveryMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF9E39BD5F47B85334E49A1D /* Pods-EveryMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EveryMe.debug.xcconfig"; path = "Target Support Files/Pods-EveryMe/Pods-EveryMe.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,6 +69,7 @@
 				1DEC970D278DB6C3006EC302 /* Constants */,
 				1D099153278837D7000CF5C4 /* Coordinator */,
 				1D09915F278843BD000CF5C4 /* CustomPublishers */,
+				1DEC9713278DC1C0006EC302 /* Extensions */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -157,6 +160,14 @@
 				1DEC970F278DB6D4006EC302 /* Appearances.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		1DEC9713278DC1C0006EC302 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1DEC9714278DC1D2006EC302 /* UIImage+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		20FB320A8552786EB18D3955 /* Pods */ = {
@@ -311,6 +322,7 @@
 				1D099151278812AF000CF5C4 /* PhotoListViewController.swift in Sources */,
 				1D09915C27883AB6000CF5C4 /* PhotoListViewCoordinator.swift in Sources */,
 				1D09915A27883AAB000CF5C4 /* PhotoListViewModel.swift in Sources */,
+				1DEC9715278DC1D2006EC302 /* UIImage+Extensions.swift in Sources */,
 				1DEC9712278DB9C4006EC302 /* FloatingButton.swift in Sources */,
 				1DEC9710278DB6D4006EC302 /* Appearances.swift in Sources */,
 				1D099155278837DE000CF5C4 /* CoordinatableViewModel.swift in Sources */,
