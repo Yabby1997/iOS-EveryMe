@@ -16,6 +16,10 @@ class AppCoordinator: AnyCoordinator {
             parent: self
         )
         
+        guard let navigationController = self.presenter as? UINavigationController else { return }
+        navigationController.navigationBar.standardAppearance = Appearances.transparentNavigationBar
+        navigationController.navigationBar.scrollEdgeAppearance = Appearances.transparentNavigationBar
+        
         self.children[sceneIdentifier] = photoListViewCoordinator
         photoListViewCoordinator.start()
     }

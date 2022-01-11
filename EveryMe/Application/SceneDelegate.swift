@@ -22,6 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let rootViewController = UINavigationController()
         self.appCoordinator = AppCoordinator(sceneIdentifier: UUID(), presenter: rootViewController)
         self.window = UIWindow(windowScene: windowScene)
+        self.window?.overrideUserInterfaceStyle = .dark
         self.window?.rootViewController = rootViewController
         self.window?.makeKeyAndVisible()
         
