@@ -19,6 +19,8 @@
 		1DDCFAF927880EB200F5214A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDCFAF827880EB200F5214A /* SceneDelegate.swift */; };
 		1DDCFB0027880EB300F5214A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DDCFAFF27880EB300F5214A /* Assets.xcassets */; };
 		1DDCFB0327880EB300F5214A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DDCFB0127880EB300F5214A /* LaunchScreen.storyboard */; };
+		1DE2D1542789E78600715D77 /* PhotoListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE2D1532789E78600715D77 /* PhotoListCell.swift */; };
+		1DEC9710278DB6D4006EC302 /* Appearances.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEC970F278DB6D4006EC302 /* Appearances.swift */; };
 		6F4F17996CC8485F21D65B48 /* Pods_EveryMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6463AAAD9514885B542AE1A2 /* Pods_EveryMe.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +41,8 @@
 		1DDCFB0227880EB300F5214A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1DDCFB0427880EB300F5214A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1DDCFB0A27880EC700F5214A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		1DE2D1532789E78600715D77 /* PhotoListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListCell.swift; sourceTree = "<group>"; };
+		1DEC970F278DB6D4006EC302 /* Appearances.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appearances.swift; sourceTree = "<group>"; };
 		6463AAAD9514885B542AE1A2 /* Pods_EveryMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EveryMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF9E39BD5F47B85334E49A1D /* Pods-EveryMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EveryMe.debug.xcconfig"; path = "Target Support Files/Pods-EveryMe/Pods-EveryMe.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,6 +62,7 @@
 		1D099152278837C2000CF5C4 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				1DEC970D278DB6C3006EC302 /* Constants */,
 				1D099153278837D7000CF5C4 /* Coordinator */,
 				1D09915F278843BD000CF5C4 /* CustomPublishers */,
 			);
@@ -79,6 +84,7 @@
 				1D09915B27883AB6000CF5C4 /* PhotoListViewCoordinator.swift */,
 				1D099150278812AF000CF5C4 /* PhotoListViewController.swift */,
 				1D09915927883AAB000CF5C4 /* PhotoListViewModel.swift */,
+				1DE2D1532789E78600715D77 /* PhotoListCell.swift */,
 			);
 			path = PhotoListScene;
 			sourceTree = "<group>";
@@ -140,6 +146,14 @@
 				1DDCFB0427880EB300F5214A /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		1DEC970D278DB6C3006EC302 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				1DEC970F278DB6D4006EC302 /* Appearances.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		20FB320A8552786EB18D3955 /* Pods */ = {
@@ -294,6 +308,7 @@
 				1D099151278812AF000CF5C4 /* PhotoListViewController.swift in Sources */,
 				1D09915C27883AB6000CF5C4 /* PhotoListViewCoordinator.swift in Sources */,
 				1D09915A27883AAB000CF5C4 /* PhotoListViewModel.swift in Sources */,
+				1DEC9710278DB6D4006EC302 /* Appearances.swift in Sources */,
 				1D099155278837DE000CF5C4 /* CoordinatableViewModel.swift in Sources */,
 				1D09915E27884143000CF5C4 /* AppCoordinator.swift in Sources */,
 				1DDCFAF727880EB200F5214A /* AppDelegate.swift in Sources */,
@@ -301,6 +316,7 @@
 				1D099161278843DE000CF5C4 /* UIControlPublisher.swift in Sources */,
 				1D099163278843FA000CF5C4 /* UIGestureRecognizerPublisher.swift in Sources */,
 				1DDCFAF927880EB200F5214A /* SceneDelegate.swift in Sources */,
+				1DE2D1542789E78600715D77 /* PhotoListCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
